@@ -1,6 +1,6 @@
 class Hash
-  def keys_of(arguments)
+  def keys_of(*arguments)
     # code goes here
-    return []
+    map {|k, v| arguments.include?(v) ? k : nil }.compact
   end
 end
